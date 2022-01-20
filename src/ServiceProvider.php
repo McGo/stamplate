@@ -3,8 +3,8 @@
 namespace McGo\Stamplate;
 
 use Illuminate\Support\Carbon;
-use McGo\Statamic\Vorlage\Commands\InstallTemplates;
-use McGo\Statamic\Vorlage\Commands\UpdateTemplates;
+use McGo\Stamplate\Commands\InstallTemplates;
+use McGo\Stamplate\Commands\UpdateTemplates;
 use Statamic\Providers\AddonServiceProvider;
 use Statamic\Statamic;
 
