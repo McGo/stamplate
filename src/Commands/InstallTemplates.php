@@ -14,8 +14,7 @@ class InstallTemplates extends Command
 
     public function handle()
     {
-        $this->info('Alle Dateien aus der Vorlage werden überschrieben.');
-        $this->info('Überschreibe content Verzeichnis.');
+        $this->info('Copy files from stamplate install folder.');
 
         $files = $this->filesAsArray($this->source().'/install');
         foreach ($files as $file) {

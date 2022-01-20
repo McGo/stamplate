@@ -13,13 +13,12 @@ class UpdateTemplates extends Command
 
     public function handle()
     {
-        $this->info('Alle Dateien aus der Vorlage werden überschrieben.');
-        $this->info('Überschreibe content Verzeichnis.');
+        $this->info('Copy files from stamplate update folder.');
 
-        $files = $this->filesAsArray($this->source().'/update/resources');
+        $files = $this->filesAsArray($this->source().'/update');
 
         foreach ($files as $file) {
-            $this->copyUpdateFile('/resources'.$file);
+            $this->copyUpdateFile($file);
         }
         $this->copyUpdateFile('/clear-cache.sh');
     }
