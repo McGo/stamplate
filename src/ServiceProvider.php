@@ -1,6 +1,6 @@
 <?php
 
-namespace McGo\Statamic\Vorlage;
+namespace McGo\Stamplate;
 
 use Illuminate\Support\Carbon;
 use McGo\Statamic\Vorlage\Commands\InstallTemplates;

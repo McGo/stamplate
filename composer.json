@@ -5,5 +5,24 @@
         "php": "^7.3 || ^8.0",
         "statamic/cms": "3.2.*"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "McGo\\Stamplate\\": "src/"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Stamplate",
+            "description": "Statamic Templates for Fieldsets, Collections, Global Info, Layouts and Templates"
+        },
+        "laravel": {
+            "providers": [
+                "McGo\\Stamplate\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-package-update": "php artisan mcgo:stamplate:update"
+    }
 }

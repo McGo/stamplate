@@ -1,6 +1,6 @@
 <?php
 
-namespace McGo\Statamic\Vorlage\Commands;
+namespace McGo\Stamplate\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
