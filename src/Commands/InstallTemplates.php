@@ -21,5 +21,7 @@ class InstallTemplates extends Command
         foreach ($files as $file) {
             $this->copyInstallFile($file);
         }
+
+        $this->call('mcgo:stamplate:update');
     }
 }
