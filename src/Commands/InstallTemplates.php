@@ -17,14 +17,9 @@ class InstallTemplates extends Command
         $this->info('Alle Dateien aus der Vorlage werden überschrieben.');
         $this->info('Überschreibe content Verzeichnis.');
 
-        $files = $this->filesAsArray($this->source().'/install/content');
+        $files = $this->filesAsArray($this->source().'/install');
         foreach ($files as $file) {
-            $this->copyInstallFile('/content'. $file);
+            $this->copyInstallFile($file);
         }
-
-        $this->copyInstallFile( '/resources/tailwind.config.js');
-        $this->copyInstallFile('/resources/css/custom.scss');
-        $this->copyInstallFile('/webpack.mix.js');
-        $this->copyInstallFile('/package.json');
     }
 }
