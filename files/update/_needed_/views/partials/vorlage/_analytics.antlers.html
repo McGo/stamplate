@@ -1,0 +1,14 @@
+{{ if website_infos:ga_tracking_id | length > 0 }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ website_infos:ga_tracking_id }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', '{{ website_infos:ga_tracking_id }}');
+</script>
+{{ /if }}

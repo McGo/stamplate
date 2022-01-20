@@ -1,0 +1,12 @@
+title: Dateianhänge
+fields:
+  -
+    handle: attachments
+    field:
+      mode: grid
+      restrict: false
+      allow_uploads: true
+      display: Dateien
+      type: assets
+      icon: assets
+      listable: hidden

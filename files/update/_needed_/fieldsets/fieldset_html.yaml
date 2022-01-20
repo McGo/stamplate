@@ -1,0 +1,11 @@
+title: HTML
+fields:
+  -
+    handle: html_code
+    field:
+      antlers: false
+      display: HTML
+      type: textarea
+      icon: textarea
+      listable: hidden
+      instructions_position: above

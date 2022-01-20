@@ -1,0 +1,413 @@
+title: Blogbeitrag
+sections:
+  main:
+    display: Hauptteil
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: page_title
+        field:
+          type: text
+          validate:
+            - required
+          instructions_position: above
+          listable: hidden
+          input_type: text
+          antlers: false
+      -
+        handle: blog_content
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          display: Content
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          sets:
+            image_text:
+              display: 'Bild mit Text'
+              fields:
+                -
+                  import: fieldset_image_with_text
+            parallax:
+              display: Parallax
+              fields:
+                -
+                  import: fieldset_parallaximage
+            video:
+              display: Video
+              fields:
+                -
+                  import: fieldset_video
+            iframe:
+              display: iFrame
+              fields:
+                -
+                  import: fieldset_iframe
+            image_gallery:
+              display: Bildergallerie
+              fields:
+                -
+                  import: fieldset_gallery
+            fileattachment:
+              display: Dateianhang
+              fields:
+                -
+                  import: fieldset_fileattachments
+            image_floating:
+              display: 'Bild (umfließend)'
+              fields:
+                -
+                  import: fieldset_floating_image
+            sourcecode:
+              display: 'Quelltext (Highlight)'
+              fields:
+                -
+                  import: fieldset_sourcecode
+            html:
+              display: HTML
+              fields:
+                -
+                  import: fieldset_html
+            event:
+              display: Veranstaltung
+              fields:
+                -
+                  import: fieldset_events
+          antlers: false
+  header:
+    display: Header
+    fields:
+      -
+        import: headerimage
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: kategorie
+        field:
+          type: terms
+          taxonomies:
+            - kategorie
+          display: Kategorie
+          mode: select
+          width: 50
+          instructions_position: above
+          listable: hidden
+          create: true
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select
+          width: 50
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          mode: single
+          time_enabled: false
+          time_required: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: Datum
+          icon: date
+          width: 25
+          listable: hidden
+          instructions_position: above
+          validate:
+            - required
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+          width: 50
+      -
+        handle: author
+        field:
+          mode: select
+          display: Author
+          type: users
+          icon: users
+          width: 25
+          listable: hidden
+          instructions_position: above
+      -
+        handle: layout
+        field:
+          hide_partials: true
+          display: Layout
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+      -
+        handle: blogkategorie
+        field:
+          type: terms
+          taxonomies:
+            - blogkategorie
+          display: Kategorie
+          mode: select
+  SEO:
+    display: SEO
+    fields:
+      -
+        handle: seotamic_meta
+        field:
+          display: Meta
+          listable: hidden
+          type: section
+      -
+        handle: seotamic_title
+        field:
+          options:
+            title: Title
+            custom: Custom
+          clearable: false
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          listable: hidden
+          default: title
+          display: Title
+          instructions: 'It can be used to determine the title used on search engine results pages.'
+      -
+        handle: seotamic_custom_title
+        field:
+          input_type: text
+          character_limit: 100
+          type: text
+          listable: hidden
+          display: 'Custom Meta Title'
+          if:
+            seotamic_title: 'equals custom'
+      -
+        handle: seotamic_title_prepend
+        field:
+          type: toggle
+          instructions: 'Prepends to title the text set in General SEO settings'
+          default: true
+          width: 50
+          listable: hidden
+          display: 'Title prepend'
+      -
+        handle: seotamic_title_append
+        field:
+          type: toggle
+          instructions: 'Appends to title the text set in General SEO settings'
+          width: 50
+          listable: hidden
+          default: true
+          display: 'Title append'
+      -
+        handle: seotamic_meta_description
+        field:
+          options:
+            empty: Empty
+            general: General
+            custom: Custom
+          clearable: false
+          default: empty
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          instructions: 'It can be used to determine the text used under the title on search engine results pages. If empty, search engines will automatically generate this text.'
+          listable: hidden
+          display: 'Meta description'
+      -
+        handle: seotamic_custom_meta_description
+        field:
+          input_type: text
+          character_limit: 200
+          type: textarea
+          listable: hidden
+          display: 'Custom Meta description'
+          if:
+            seotamic_meta_description: 'equals custom'
+      -
+        handle: seotamic_canonical
+        field:
+          type: link
+          instructions: 'By default it will be set to the page url'
+          listable: hidden
+          display: Canonical
+      -
+        handle: seotamic_social
+        field:
+          type: section
+          listable: hidden
+          display: Social
+      -
+        handle: seotamic_open_graph_title
+        field:
+          options:
+            title: Title
+            general: General
+            custom: Custom
+          clearable: false
+          default: title
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          listable: hidden
+          display: 'Open Graph title'
+      -
+        handle: seotamic_custom_open_graph_title
+        field:
+          input_type: text
+          character_limit: 100
+          type: text
+          listable: hidden
+          display: 'Custom Open Graph title'
+          if:
+            seotamic_open_graph_title: 'equals custom'
+      -
+        handle: seotamic_open_graph_description
+        field:
+          options:
+            meta: 'Meta description'
+            general: 'General description'
+            custom: Custom
+          clearable: false
+          default: general
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          listable: hidden
+          display: 'Open Graph description'
+      -
+        handle: seotamic_custom_open_graph_description
+        field:
+          input_type: text
+          character_limit: 200
+          type: textarea
+          listable: hidden
+          display: 'Custom Open Graph description'
+          if:
+            seotamic_open_graph_description: 'equals custom'
+      -
+        handle: seotamic_twitter_title
+        field:
+          options:
+            title: Title
+            general: General
+            custom: Custom
+          clearable: false
+          default: title
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          listable: hidden
+          display: 'Twitter title'
+      -
+        handle: seotamic_custom_twitter_title
+        field:
+          input_type: text
+          character_limit: 100
+          type: text
+          listable: hidden
+          display: 'Custom Twitter title'
+          if:
+            seotamic_twitter_title: 'equals custom'
+      -
+        handle: seotamic_twitter_description
+        field:
+          options:
+            meta: 'Meta description'
+            general: 'General description'
+            custom: Custom
+          clearable: false
+          default: general
+          multiple: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          type: select
+          listable: hidden
+          display: 'Twitter description'
+      -
+        handle: seotamic_custom_twitter_description
+        field:
+          input_type: text
+          character_limit: 200
+          type: textarea
+          listable: hidden
+          display: 'Custom Twitter description'
+          if:
+            seotamic_twitter_description: 'equals custom'
+      -
+        handle: seotamic_image
+        field:
+          container: assets
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          instructions: 'If not set, the general image will be used. It''s best to use an image with a 1.91:1 aspect ratio that is at least 1200px wide for universal support. The image will be resized to 1200 width.'
+          listable: hidden
+          display: Image

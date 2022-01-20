@@ -1,0 +1,6 @@
+<div class="w-full sm:w-100 {{image_float_position}} inline p-4">
+    {{ image }}
+    <img src="{{ glide src="/{{ url }}" quality="100" width="400" sharpen="10" fit="crop_focal" }}" alt="{{ alt }}" class="rounded shadow-md ">
+    {{ /image  }}
+    <span class="italic text-xs">{{ image_caption }}</span>
+</div>

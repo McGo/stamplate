@@ -1,0 +1,46 @@
+sections:
+  main:
+    display: Hauptteil
+    fields:
+      -
+        handle: facebook
+        field:
+          input_type: url
+          antlers: false
+          display: Facebook
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          validate:
+            - url
+      -
+        handle: instagram
+        field:
+          input_type: text
+          antlers: false
+          display: Instagram
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: youtube
+        field:
+          input_type: text
+          antlers: false
+          display: Youtube
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+      -
+        handle: twitter
+        field:
+          input_type: text
+          antlers: false
+          display: Twitter
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

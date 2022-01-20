@@ -1,0 +1,38 @@
+title: Quelltext
+fields:
+  -
+    handle: language
+    field:
+      options:
+        html: HTML
+        sql: SQL
+        javascript: Javascript
+        php: PHP
+        bash: 'Shell Script'
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Programmiersprache
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+  -
+    handle: code
+    field:
+      theme: material
+      mode: php
+      mode_selectable: false
+      indent_type: tabs
+      indent_size: 4
+      key_map: default
+      line_numbers: true
+      line_wrapping: true
+      display: Code
+      type: code
+      icon: code
+      listable: hidden
+      instructions_position: above

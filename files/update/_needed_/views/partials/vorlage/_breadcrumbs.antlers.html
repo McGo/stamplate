@@ -1,0 +1,15 @@
+<ul class="text-2xs flex flex-row p-2">
+    {{ nav:breadcrumbs }}
+
+    <li class="pr-2 {{ if is_current }}current{{ /if }}">
+        {{ if uri == "/" }}
+        <a href="/"><i class="fas fa-home"></i></a>
+        {{ else }}
+        <a href="{{ url }}">{{ title }}</a>
+        {{ /if  }}
+    </li>
+    {{ if !last }}
+    <span class="pr-2 text-3xs"><i class="fas fa-angle-right"></i></span>
+    {{ /if }}
+    {{ /nav:breadcrumbs  }}
+</ul>

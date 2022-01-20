@@ -1,0 +1,69 @@
+#navigation {
+    @apply h-12 md:h-24 fixed text-white text-lg;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 0.8s;
+
+    .mobile-navigation > ul {
+        @apply bg-white;
+        color: var(--global-breadnavi-dark);
+
+        & > li a {
+            &:hover {
+                color: var(--global-breadnavi-light);
+                background-color: var(--global-breadnavi-dark);
+            }
+        }
+
+        & > li ul li:hover {
+            color: var(--global-breadnavi-light);
+            background-color: var(--global-breadnavi-dark);
+        }
+    }
+
+    .non-mobile-navigation ul li ul {
+        @apply text-base;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+
+    .non-mobile-navigation ul li:hover {
+        color: var(--global-breadnavi-light);
+        background-color: var(--global-breadnavi-dark);
+
+        ul {
+            @apply visible;
+            opacity: 100%;
+            color: var(--global-breadnavi-light);
+            background-color: var(--global-breadnavi-dark);
+
+            li:hover {
+                color: var(--global-breadnavi-dark);
+                background-color: var(--global-breadnavi-light);
+            }
+        }
+    }
+}
+
+.custom-without-headerimages {
+    #navigation {
+        @apply text-black;
+        background-color: transparent;
+    }
+
+    .custom-header-text {
+        @include unstroke();
+    }
+}
+
+body.scrolled {
+    #navigation {
+        @apply h-12 bg-white text-black opacity-90 text-base;
+    }
+}
+
+body.navigation-opened #blackout {
+    transition: all 0.8s;
+    @apply opacity-70 bg-black;
+    visibility: visible !important;
+}

@@ -1,0 +1,12 @@
+title: Seiten
+template: templates/vorlage/page
+layout: layouts/vorlage/page
+revisions: false
+route: '{parent_uri}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: true

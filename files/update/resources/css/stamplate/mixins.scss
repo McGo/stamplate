@@ -1,0 +1,6 @@
+@mixin stroke($color: #000, $size: 1px) {
+    filter:drop-shadow(0 0 0.2em black);
+}
+@mixin unstroke() {
+    filter:none;
+}

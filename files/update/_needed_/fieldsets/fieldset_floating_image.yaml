@@ -1,0 +1,43 @@
+title: 'Bild mit umfließenden Text'
+fields:
+  -
+    handle: image
+    field:
+      mode: list
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      display: Bild
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      max_files: 1
+  -
+    handle: image_caption
+    field:
+      input_type: text
+      antlers: false
+      display: Bildunterschrift
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+  -
+    handle: image_float_position
+    field:
+      options:
+        float-left: Link
+        float-right: Rechts
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Position
+      type: select
+      icon: select
+      instructions: 'Das Bild wird mobil immer in der ganzen Breite angezeigt, in breiteren Auflösungen wird es jedoch so angezeigt, dass der Text es umfließt. Bei ganz breiten Auflösungen wird es immer weiter aus den Inhalt herausgerückt.'
+      listable: hidden
+      instructions_position: above

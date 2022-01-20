@@ -1,0 +1,27 @@
+
+<footer class="flex-none" style="
+            {{if website_infos:background_footer }} background-color:{{ website_infos:background_footer }}; {{/if}}
+            {{if website_infos:text_footer }} color:{{ website_infos:text_footer }}; {{/if}}
+    ">
+    {{ partial src = "partials/vorlage/footer" }}
+</footer>
+<cookie-consent></cookie-consent>
+
+</main>
+<div id="blackout" class="w-full h-full absolute top-0 left-0  invisible"></div>
+
+<script src="{{ mix src='/js/site.js' }}"></script>
+<script>
+    window.onscroll = function () {
+        if (document.body.scrollTop > 1 || document.documentElement.scrollTop >= 1) {
+            document.body.classList.add("scrolled");
+        } else {
+            document.body.classList.remove("scrolled");
+        }
+    };
+</script>
+
+{{ partial src = "partials/vorlage/analytics" }}
+
+</body>
+</html>

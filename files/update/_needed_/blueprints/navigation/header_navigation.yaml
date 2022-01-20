@@ -1,0 +1,15 @@
+sections:
+  main:
+    display: Hauptteil
+    fields:
+      -
+        handle: navigation_icon
+        field:
+          input_type: text
+          antlers: false
+          display: Icon
+          type: text
+          icon: text
+          instructions: 'Font awesome icon CSS-Klasse'
+          listable: hidden
+          instructions_position: above

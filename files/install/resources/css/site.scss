@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Uncomment if you want to automatically include the updating stamplate styles
+// @import "stamplate";
+
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Import prims
+@import "prism.css";
+
+// Font awesome
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+

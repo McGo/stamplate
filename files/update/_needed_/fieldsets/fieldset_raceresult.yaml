@@ -1,0 +1,28 @@
+title: Raceresult
+fields:
+  -
+    handle: veranstaltungs_id
+    field:
+      display: 'Veranstaltungs ID'
+      type: integer
+      icon: integer
+      width: 50
+      listable: hidden
+  -
+    handle: rr_type
+    field:
+      options:
+        teilnehmer: Teilnehmer
+        ergebnisse: Ergebnisse
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Typ
+      type: select
+      icon: select
+      width: 50
+      listable: hidden

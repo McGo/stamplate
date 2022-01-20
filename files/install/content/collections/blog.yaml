@@ -1,0 +1,13 @@
+title: Blogbeitrag
+template: templates/vorlage/blog
+layout: layouts/vorlage/blog
+taxonomies:
+  1: tags
+  2: kategorie
+revisions: false
+route: '{mount}/{year}/{month}/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

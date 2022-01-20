@@ -1,0 +1,9 @@
+title: 'Website Infos'
+data:
+  titel: 'Statamic Website'
+  navgiation_breadcrumb_light: '#E6FF89'
+  navgiation_breadcrumb_dark: '#2C3200'
+  text_content: '#720000'
+  background_content: '#F6F5F5'
+  text_footer: '#FFFFFF'
+  background_footer: '#07274C'

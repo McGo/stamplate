@@ -1,0 +1,10 @@
+title: Video
+fields:
+  -
+    handle: video
+    field:
+      display: Video
+      type: video
+      icon: video
+      listable: hidden
+      instructions_position: above

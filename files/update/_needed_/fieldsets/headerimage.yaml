@@ -1,0 +1,82 @@
+title: Headerbilder
+fields:
+  -
+    handle: header_image_contents
+    field:
+      collapse: false
+      sets:
+        header_image_content:
+          display: Bildinhalt
+          fields:
+            -
+              handle: header_image_content_image
+              field:
+                mode: list
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                max_files: 1
+                display: Bild
+                type: assets
+                icon: assets
+                listable: hidden
+                instructions_position: above
+            -
+              handle: header_image_content_text
+              field:
+                always_show_set_button: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                display: Inhalt
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+      display: Bildinhalte
+      type: replicator
+      icon: replicator
+      width: 75
+      listable: hidden
+      instructions_position: above
+  -
+    handle: header_image_height
+    field:
+      options:
+        h-full: 100%
+        h-2/3: 66%
+        h-1/2: 50%
+        h-1/3: 33%
+        h-1/4: 25%
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      default: h-full
+      display: Höhe
+      type: select
+      icon: select
+      width: 25
+      listable: hidden
+      instructions_position: above

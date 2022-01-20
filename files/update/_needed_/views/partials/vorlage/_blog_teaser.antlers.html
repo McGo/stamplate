@@ -1,0 +1,21 @@
+<div class="w-full md:w-1/3 p-2 relative">
+    <a href="{{ link :to=" url" }}">
+    {{ header_image_contents.0 }}
+    {{ asset :url = "header_image_content_image" }}
+    <div class="w-full h-64 overflow-hidden shadow rounded-lg">
+        <div class="w-full h-full bg-cover  rounded-lg"
+             style="background-image: url('{{ glide src="/assets/{{ path }}" height="400" sharpen="10" fit="crop_focal"  }}'); background-position: {{ focus_css }};">
+    </div>
+</div>
+{{ /asset        }}
+{{ /header_image_contents.0       }}
+</a>
+<div class="text-white absolute top-0 left-0 m-2 px-4 py-2 " style="background-color: rgba(0,0,0,0.4);">
+    <h2 class="no-underline pb-0 text-xl">
+        <a href="{{ link :to=" url" }}" class="no-underline">{{ page_title }}</a>
+    </h2>
+</div>
+<div class="text-white absolute bottom-0 right-0 text-xs px-4 py-1 m-2 font-bold"
+     style="background-color: rgba(0,0,0,0.4);">{{ date iso_format="D.M.Y"}}
+</div>
+</div>

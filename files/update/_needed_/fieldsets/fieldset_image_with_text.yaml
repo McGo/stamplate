@@ -1,0 +1,94 @@
+title: 'Bild mit Text'
+fields:
+  -
+    handle: image_text_image
+    field:
+      mode: list
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: Bild
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+  -
+    handle: image_description
+    field:
+      input_type: text
+      antlers: false
+      display: Bildunterschrift
+      type: text
+      icon: text
+      listable: hidden
+      instructions_position: above
+  -
+    handle: image_text_layout
+    field:
+      options:
+        image_small: 'Bild kleiner als Text'
+        image_equal: 'Bild und Text gleich groß'
+        image_large: 'Bild größer als Text'
+        image_full: 'Bild volle Breite, kein Text'
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Aufteilung
+      type: select
+      icon: select
+      width: 50
+      listable: hidden
+      instructions_position: above
+  -
+    handle: image_text_orientation
+    field:
+      options:
+        image_left: 'Bild links (mobil oben drüber)'
+        image_right: 'Bild rechts (mobil drunter)'
+      multiple: false
+      clearable: false
+      searchable: true
+      taggable: false
+      push_tags: false
+      cast_booleans: false
+      display: Ausrichtung
+      type: select
+      icon: select
+      listable: hidden
+      instructions_position: above
+      width: 50
+  -
+    handle: image_text_text
+    field:
+      always_show_set_button: false
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+        - table
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      display: Text
+      type: bard
+      icon: bard
+      listable: hidden
+      instructions_position: above

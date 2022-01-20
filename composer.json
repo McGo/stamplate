@@ -4,5 +4,6 @@
     "require": {
         "php": "^7.3 || ^8.0",
         "statamic/cms": "3.2.*"
-    }
+    },
+    "license": "MIT"
 }

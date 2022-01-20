@@ -1,0 +1,123 @@
+title: Blog
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: page_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Page title'
+          type: text
+          icon: text
+          width: 75
+          listable: hidden
+          instructions_position: above
+      -
+        handle: hide_page_title
+        field:
+          default: false
+          display: verstecken
+          type: toggle
+          icon: toggle
+          width: 25
+          listable: hidden
+          instructions_position: above
+      -
+        handle: content
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          display: Inhalt
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          sets:
+            image_text:
+              display: 'Bild mit Text'
+              fields:
+                - import: fieldset_image_with_text
+            parallax:
+              display: Parallax
+              fields:
+                - import: fieldset_parallaximage
+            video:
+              display: Video
+              fields:
+                - import: fieldset_video
+            iframe:
+              display: iFrame
+              fields:
+                - import: fieldset_iframe
+            image_gallery:
+              display: Bildergallerie
+              fields:
+                - import: fieldset_gallery
+            fileattachment:
+              display: Dateianhang
+              fields:
+                - import: fieldset_fileattachments
+            image_floating:
+              display: 'Bild (umfließend)'
+              fields:
+                - import: fieldset_floating_image
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          validate:
+            - required
+      -
+        handle: author
+        field:
+          type: users
+          display: Author
+          default: current
+          localizable: true
+          max_items: 1
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          localizable: true
+  header:
+    display: Header
+    fields:
+      -
+        import: headerimage

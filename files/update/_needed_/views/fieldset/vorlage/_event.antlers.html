@@ -1,0 +1,28 @@
+
+<div class="container">
+    {{ events }}
+    <div class="flex mx-10">
+        <div class="p-2 leading-none">
+            <span class="block text-2xl pb-0 mb-0 font-extrabold">{{ event_date format_localized="%d" }}</span>
+            <span class="uppercase text-xs">{{ event_date format_localized="%b" }}</span>
+        </div>
+        <div class="flex-grow p-2">
+            <h3 class="pb-0">{{ event_title }}</h3>
+            <span class="text-sm text-gray-500">
+                {{ event_date format_localized="%A"}}
+            </span>
+            <span class="text-sm text-gray-500">{{ event_description }}</span>
+        </div>
+        <div class="p-2">
+            {{ if event_link }}
+            <a href="{{event_link}}" class="button">Details</a>
+            {{ /if }}
+        </div>
+        <div class="p-2" style="width: 140px;">
+            {{ event_image }}
+            <img src="{{ glide src="{{ url }}" quality="100" width="100" height="100" sharpen="5" fit="crop_focal"  }}" alt="{{ alt }}" class="w-full">
+            {{ /event_image }}
+        </div>
+    </div>
+    {{ /events }}
+</div>

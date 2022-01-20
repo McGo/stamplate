@@ -1,0 +1,13 @@
+title: Bild
+fields:
+  -
+    handle: image
+    field:
+      mode: grid
+      restrict: false
+      allow_uploads: true
+      max_files: 1
+      type: assets
+      localizable: false
+      listable: hidden
+      display: Bild

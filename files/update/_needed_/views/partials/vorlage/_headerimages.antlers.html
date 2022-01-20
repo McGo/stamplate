@@ -1,0 +1,37 @@
+{{ if header_image_contents }}
+{{ partial src = "partials/vorlage/navigation" }}
+<header-images-animation class="w-full flex-none {{ header_image_height}} custom-with-headerimages">
+
+    {{ header_image_contents }}
+    {{ asset :url = "header_image_content_image" }}
+    <div class="w-full h-full relative overflow-hidden">
+        <div class="w-full h-full absolute top-0 left-0 bg-cover custom-headerimage"
+             style="background-image: url('{{ glide src="/assets/{{ path }}" quality="100" width="1500" sharpen="10" fit="crop_focal" }}'); background-position: {{ focus_css }};">
+    </div>
+    <div class="text-white absolute bottom-0 left-0 w-full custom-header-text">
+        <div class="pb-4 container">
+            {{ if !hide_page_title }}
+            <h1 class="text-xl md:text-3xl">{{ page_title }}</h1>
+            {{ /if }}
+            {{ header_image_content_text }}
+        </div>
+    </div>
+    </div>
+    {{ /asset     }}
+    {{ /header_image_contents     }}
+
+</header-images-animation>
+{{ else }}
+<div class="w-full flex-none bg-cover bg-right-top relative custom-without-headerimages">
+    {{ partial src = "partials/vorlage/navigation" }}
+
+    <div class="text-black w-full custom-header-text pt-24 md:pt-32">
+        {{ if !hide_page_title }}
+        <div class="pb-4 container">
+            <h1 class="text-xl md:text-3xl">{{ page_title }}</h1>
+            {{ header_image_content_text }}
+        </div>
+        {{ /if    }}
+    </div>
+</div>
+{{ /if }}

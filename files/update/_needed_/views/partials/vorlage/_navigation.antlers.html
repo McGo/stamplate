@@ -1,0 +1,91 @@
+<nav class="w-full z-10 flex-none " id="navigation">
+    <div class="container justify-between flex flex-row">
+        <div class="items-end transition-all duration-500 flex flex-wrap items-center justify-center"
+             id="logo-container">
+            <a href="/" class="h-full" @click="open = false">
+                <img src="{{ website_infos:logo }}" class="h-full pl-2 md:pl-0" id="logo">
+            </a>
+            {{ if ! website_infos:hide_title }}
+            <a href="/" class="pl-2 break-all" @click="open = false">
+                {{ website_infos:titel }}
+            </a>
+            {{ /if }}
+
+        </div>
+        <div class="justify-center flex flex-wrap flex-col ">
+            <div class="w-full flex flex-wrap justify-end md:hidden pb-2 pr-2">
+                <button
+                        @click="toggle()"
+                        @mouseover="hovered = true"
+                        @mouseleave="hovered = false"
+                        class="flex items-center px-3 py-2 border rounded">
+                    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                         class="fill-current h-3 w-3">
+                        <title> Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-full hidden md:block non-mobile-navigation">
+                <ul class="flex  justify-end w-full md:flex-row font-bold">
+                    {{ nav:header_navigation include_home = "true" }}
+
+                    <li class="py-2 px-4">
+                        {{ if navigation_icon }}
+                        <a href="{{ url }}"><i
+                                class="{{navigation_icon}}"></i></a>
+                        {{ else }}
+                        <a href="{{ url }}">{{ title }}</a>
+                        {{ /if     }}
+
+                        {{ if children > 0 }}
+                        <ul class="-ml-4 mt-2 absolute w-full list-reset flex justify-start flex-col normal-case ">
+                            {{ children }}
+                            <li class="w-full">
+                                {{ if navigation_icon }}
+                                <a class="block pl-4 p-2 w-full"  href="{{ url }}"><i
+                                        class="{{navigation_icon}}"></i></a>
+                                {{ else }}
+                                <a class="block pl-4 p-2 w-full" href="{{ url }}">{{ title }}</a>
+                                {{ /if     }}
+                            </li>
+                            {{ /children }}
+                        </ul>
+                        {{ /if  }}
+                    </li>
+                    {{ /nav:header_navigation }}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="w-full md:hidden mobile-navigation" :class="open ? 'flex': 'hidden'">
+        <ul class="flex flex-wrap flex-col justify-end w-full md:flex-row opacity-90 font-bold pb-2">
+
+            {{ nav:header_navigation include_home = "true" }}
+            <li class="w-full ">
+                <a @click="open = ! open" class="w-full block py-2 px-4 " href="{{ url }}">
+                    {{ title }}
+                </a>
+
+                {{ if children > 0 }}
+                <ul class="pl-4 w-full list-reset flex justify-start text-sm flex-col normal-case ">
+                    {{ children }}
+                    <li class="w-full">
+                        {{ if navigation_icon }}
+                        <a class="block pl-4 p-2 w-full"  href="{{ url }}"><i
+                                class="{{navigation_icon}}"></i></a>
+                        {{ else }}
+                        <a class="block pl-4 p-2 w-full" href="{{ url }}">{{ title }}</a>
+                        {{ /if     }}
+                    </li>
+                    {{ /children }}
+                </ul>
+                {{ /if  }}
+            </li>
+            {{ /nav:header_navigation         }}
+        </ul>
+    </div>
+</nav>

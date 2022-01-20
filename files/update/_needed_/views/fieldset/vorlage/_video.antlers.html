@@ -1,0 +1,8 @@
+<div class="container">
+    {{ if video | is_embeddable }}
+    <iframe src="{{ video  | embed_url }}" width="640" height="390"></iframe>
+    {{ else }}
+    <video src="{{ video | embed_url }}" width="640" height="390"></video>
+    {{ /if  }}
+</div>
+

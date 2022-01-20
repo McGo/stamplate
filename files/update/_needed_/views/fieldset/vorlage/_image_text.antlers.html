@@ -1,0 +1,32 @@
+<div class="container flex flex-wrap">
+    {{ if image_text_layout == "image_full"}}
+    {{ image_text_image }}
+    {{ partial src="fieldset/vorlage/image_with_caption" }}
+    {{ /image_text_image  }}
+    {{ else }}
+
+    {{ if image_text_orientation == "image_left"}}
+    <div class="w-full {{ if image_text_layout == "image_equal"}} md:w-1/2  {{ elseif image_text_layout == "image_large"}} md:w-2/3 {{ else }} md:w-1/3 {{ /if }}">
+    {{ image_text_image }}
+    {{ partial src="fieldset/vorlage/image_with_caption" }}
+    {{ /image_text_image  }}
+</div>
+{{ /if }}
+
+<div class="w-full
+    {{ if image_text_orientation == "image_left"}} pt-4 md:pt-0 md:pl-4 {{ else }} pb-4 md:pb-0 md:pr-4 {{ /if }}
+{{ if image_text_layout == "image_equal"}} md:w-1/2  {{ elseif image_text_layout == "image_large"}} md:w-1/3 {{ else }} md:w-2/3 {{ /if }}
+">
+{{ image_text_text }}
+</div>
+
+{{ if image_text_orientation == "image_right"}}
+<div class="w-full {{ if image_text_layout == "image_equal"}} md:w-1/2  {{ elseif image_text_layout == "image_large"}} md:w-2/3 {{ else }} md:w-1/3 {{ /if }}">
+{{ image_text_image }}
+{{ partial src="fieldset/vorlage/image_with_caption" }}
+{{ /image_text_image  }}
+</div>
+{{ /if }}
+{{ /if }}
+</div>
+

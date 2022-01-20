@@ -1,0 +1,31 @@
+title: iFrame
+fields:
+  -
+    handle: url
+    field:
+      input_type: text
+      type: text
+      localizable: false
+      listable: hidden
+      display: URL
+      validate: url
+  -
+    handle: width
+    field:
+      input_type: text
+      type: text
+      instructions: 'Die Breite des iFrames in % oder pixeln'
+      localizable: false
+      width: 50
+      listable: hidden
+      display: Breite
+  -
+    handle: height
+    field:
+      input_type: text
+      type: text
+      instructions: 'Die Höhe des iFrames in Prozent oder Pixeln'
+      localizable: false
+      width: 50
+      listable: hidden
+      display: Höhe

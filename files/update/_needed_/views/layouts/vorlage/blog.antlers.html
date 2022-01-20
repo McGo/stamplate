@@ -1,0 +1,17 @@
+{{ partial src="layouts/vorlage/header" }}
+
+<div class="flex-grow pt-4 custom-content">
+    <div class="container pb-10">
+        {{ kategorie }}
+        <a href="{{url}}" class="custom-badge">{{ title }}</a>
+        {{ /kategorie }}
+
+        {{ tags }}
+        <a href="{{url}}" class="custom-badge">{{ title }}</a>
+        {{ /tags  }}
+    </div>
+
+    {{ template_content }}
+</div>
+
+{{ partial src="layouts/vorlage/footer" }}
