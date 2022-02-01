@@ -1,5 +1,5 @@
 title: Blogbeitrag
-template: themes/headerimage/templates/blog
+template: stamplate/themes/headerimage/templates/blog
 layout: layouts/blog
 taxonomies:
   1: tags
