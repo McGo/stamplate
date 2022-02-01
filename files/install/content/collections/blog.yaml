@@ -1,6 +1,6 @@
 title: Blogbeitrag
-template: templates/vorlage/blog
-layout: layouts/vorlage/blog
+template: themes/headerimage/templates/blog
+layout: layouts/blog
 taxonomies:
   1: tags
   2: kategorie

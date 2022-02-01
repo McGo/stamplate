@@ -1,6 +1,6 @@
 title: Seiten
-template: templates/vorlage/page
-layout: layouts/vorlage/page
+template: themes/headerimage/templates/page
+layout: layouts/page
 revisions: false
 route: '{parent_uri}/{slug}'
 date: true
