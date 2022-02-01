@@ -10,7 +10,7 @@
     <link rel="icon" href="{{ glide src="{{ website_infos:favicon }}" quality="100" width="32" fit="crop_focal"  }}" sizes="32x32">
     {{ /if }}
     <link rel="stylesheet" href="{{ mix src='css/site.css' }}">
-    {{ partial src = "partials/vorlage/css_variables" }}
+    {{ partial src = "stamplate/themes/headerimage/partials/css_variables" }}
     <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=WeakMap"></script>
 </head>
 <body class="w-full h-full relative" style="
@@ -20,11 +20,11 @@
 <main class="w-full h-full flex flex-col relative" id="top">
 
 
-    {{ partial src = "partials/vorlage/headerimages" }}
+    {{ partial src = "stamplate/themes/headerimage/partials/headerimages" }}
 
     <div class="flex-none py-2 custom-breadcrumb">
         <div class="container">
-            {{ partial src = "partials/vorlage/breadcrumbs" }}
+            {{ partial src = "stamplate/themes/headerimage/partials/breadcrumbs" }}
         </div>
     </div>
 
