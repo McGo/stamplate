@@ -1,5 +1,5 @@
 {{ if header_image_contents }}
-{{ partial src = "partials/vorlage/navigation" }}
+{{ partial src = "stamplate/themes/headerimage/partials/navigation" }}
 <header-images-animation class="w-full flex-none {{ header_image_height}} custom-with-headerimages">
 
     {{ header_image_contents }}
@@ -23,7 +23,7 @@
 </header-images-animation>
 {{ else }}
 <div class="w-full flex-none bg-cover bg-right-top relative custom-without-headerimages">
-    {{ partial src = "partials/vorlage/navigation" }}
+    {{ partial src = "stamplate/themes/headerimage/partials/navigation" }}
 
     <div class="text-black w-full custom-header-text pt-24 md:pt-32">
         {{ if !hide_page_title }}
