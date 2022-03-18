@@ -3,7 +3,7 @@
     "description": "Statamic Templates for Fieldsets, Collections, Global Info, Layouts and Templates",
     "require": {
         "php": "^7.3 || ^8.0",
-        "statamic/cms": "3.2.*"
+        "statamic/cms": "^3.2 || ^3.3"
     },
     "license": "MIT",
     "autoload": {
