@@ -1,9 +1,9 @@
 <nav class="w-full z-10 flex-none " id="navigation">
     <div class="container justify-between flex flex-row">
-        <div class="items-end transition-all duration-500 flex flex-wrap items-center justify-center"
+        <div class="items-end transition-all duration-500 flex items-center justify-center"
              id="logo-container">
             <a href="/" class="h-full" @click="open = false">
-                <img src="{{ website_infos:logo }}" class="h-full pl-2 md:pl-0" id="logo">
+                <img src="{{ website_infos:logo }}" class="h-full pl-2 lg:pl-0" id="logo">
             </a>
             {{ if ! website_infos:hide_title }}
             <a href="/" class="pl-2 break-all" @click="open = false">
@@ -13,7 +13,7 @@
 
         </div>
         <div class="justify-center flex flex-wrap flex-col ">
-            <div class="w-full flex flex-wrap justify-end md:hidden pb-2 pr-2">
+            <div class="w-full flex flex-wrap justify-end lg:hidden pb-2 pr-2">
                 <button
                         @click="toggle()"
                         @mouseover="hovered = true"
@@ -27,16 +27,16 @@
                 </button>
             </div>
 
-            <div class="w-full hidden md:block non-mobile-navigation">
-                <ul class="flex  justify-end w-full md:flex-row font-bold">
+            <div class="w-full hidden lg:block non-mobile-navigation">
+                <ul class="flex  justify-end w-full lg:flex-row font-bold">
                     {{ nav:header_navigation include_home = "true" }}
 
                     <li class="py-2 px-4">
                         {{ if navigation_icon }}
-                        <a href="{{ url }}"><i
+                        <a href="{{ url }}" target="{{ link_target }}"><i
                                 class="{{navigation_icon}}"></i></a>
                         {{ else }}
-                        <a href="{{ url }}">{{ title }}</a>
+                        <a href="{{ url }}" target="{{ link_target }}">{{ title }}</a>
                         {{ /if     }}
 
                         {{ if children > 0 }}
@@ -44,10 +44,10 @@
                             {{ children }}
                             <li class="w-full">
                                 {{ if navigation_icon }}
-                                <a class="block pl-4 p-2 w-full"  href="{{ url }}"><i
+                                <a class="block pl-4 p-2 w-full" target="{{ link_target }}"  href="{{ url }}"><i
                                         class="{{navigation_icon}}"></i></a>
                                 {{ else }}
-                                <a class="block pl-4 p-2 w-full" href="{{ url }}">{{ title }}</a>
+                                <a class="block pl-4 p-2 w-full" target="{{ link_target }}" href="{{ url }}">{{ title }}</a>
                                 {{ /if     }}
                             </li>
                             {{ /children }}
@@ -61,12 +61,12 @@
         </div>
     </div>
 
-    <div class="w-full md:hidden mobile-navigation" :class="open ? 'flex': 'hidden'">
-        <ul class="flex flex-wrap flex-col justify-end w-full md:flex-row opacity-90 font-bold pb-2">
+    <div class="w-full lg:hidden mobile-navigation" :class="open ? 'flex': 'hidden'">
+        <ul class="flex flex-wrap flex-col justify-end w-full lg:flex-row opacity-90 font-bold pb-2">
 
             {{ nav:header_navigation include_home = "true" }}
             <li class="w-full ">
-                <a @click="open = ! open" class="w-full block py-2 px-4 " href="{{ url }}">
+                <a @click="open = ! open" class="w-full block py-2 px-4 " target="{{ link_target }}" href="{{ url }}">
                     {{ title }}
                 </a>
 
@@ -75,10 +75,10 @@
                     {{ children }}
                     <li class="w-full">
                         {{ if navigation_icon }}
-                        <a class="block pl-4 p-2 w-full"  href="{{ url }}"><i
+                        <a class="block pl-4 p-2 w-full" target="{{ link_target }}" href="{{ url }}"><i
                                 class="{{navigation_icon}}"></i></a>
                         {{ else }}
-                        <a class="block pl-4 p-2 w-full" href="{{ url }}">{{ title }}</a>
+                        <a class="block pl-4 p-2 w-full" target="{{ link_target }}" href="{{ url }}">{{ title }}</a>
                         {{ /if     }}
                     </li>
                     {{ /children }}
