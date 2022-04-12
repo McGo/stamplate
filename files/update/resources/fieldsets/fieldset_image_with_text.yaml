@@ -13,6 +13,19 @@ fields:
       icon: assets
       listable: hidden
       instructions_position: above
+      width: 66
+  -
+    handle: image_text_image_url
+    field:
+      input_type: url
+      antlers: false
+      display: URL
+      type: text
+      icon: text
+      instructions: 'Sofern hier eine URL eingegeben wird, wird das Bild hiermit verlinkt.'
+      width: 33
+      listable: hidden
+      instructions_position: above
   -
     handle: image_description
     field:
