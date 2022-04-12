@@ -1,4 +1,10 @@
+{{ if url }}
+<a href="{{url}}">
+    <img src="{{ glide src="{{ url }}" quality="100" width="800" sharpen="10" fit="crop_focal"  }}" alt="{{ alt }}" class="w-full rounded shadow-md ">
+</a>
+{{ else }}
 <img src="{{ glide src="{{ url }}" quality="100" width="800" sharpen="10" fit="crop_focal"  }}" alt="{{ alt }}" class="w-full rounded shadow-md ">
+{{ /if }}
 <div class="text-3xs italic p-1">
     {{image_description}}<br>
     <span class="float-right text-4xs"><i><strong>{{copyright}}</strong> {{quelle_url}}</i></span>
