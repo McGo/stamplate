@@ -1,5 +1,5 @@
-{{ if url }}
-<a href="{{url}}">
+{{ if image_link_url }}
+<a href="{{ image_link_url }}">
     <img src="{{ glide src="{{ url }}" quality="100" width="800" sharpen="10" fit="crop_focal"  }}" alt="{{ alt }}" class="w-full rounded shadow-md ">
 </a>
 {{ else }}
