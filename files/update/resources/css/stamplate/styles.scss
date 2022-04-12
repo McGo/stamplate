@@ -1,3 +1,12 @@
+h1 {
+    @apply text-3xl font-bold pb-4 pt-2;
+}
+h2 {
+    @apply text-2xl font-bold pb-4 pt-2;
+}
+h3 {
+    @apply text-xl font-bold pb-4 pt-2;
+}
 body {
     @apply leading-relaxed text-gray-600 bg-gray-100;
 
