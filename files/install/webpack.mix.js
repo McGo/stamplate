@@ -3,7 +3,7 @@ const tailwindcss = require('tailwindcss');
 
 mix.js('resources/js/site.js', 'public/js')
     .vue()
-    .copy('node_moduldes/@glidejs/glide/dist', 'public/vendor/glidejs')
+    .copy('node_modules/@glidejs/glide/dist', 'public/vendor/glidejs')
     .sass('resources/css/site.scss', 'public/css')
     .options({
         processCssUrls: false,

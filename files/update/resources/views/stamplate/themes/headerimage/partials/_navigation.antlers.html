@@ -37,22 +37,23 @@
                                 class="{{navigation_icon}}"></i></a>
                         {{ else }}
                         <a href="{{ url }}" target="{{ link_target }}">{{ title }}</a>
-                        {{ /if     }}
+                        {{ /if }}
 
                         {{ if children > 0 }}
                         <ul class="-ml-4 mt-2 absolute w-full list-reset flex justify-start flex-col normal-case ">
                             {{ children }}
                             <li class="w-full">
                                 {{ if navigation_icon }}
-                                <a class="block pl-4 p-2 w-full" target="{{ link_target }}"  href="{{ url }}"><i
+                                <a class="block pl-4 p-2 w-full" target="{{ link_target }}" href="{{ url }}"><i
                                         class="{{navigation_icon}}"></i></a>
                                 {{ else }}
-                                <a class="block pl-4 p-2 w-full" target="{{ link_target }}" href="{{ url }}">{{ title }}</a>
-                                {{ /if     }}
+                                <a class="block pl-4 p-2 w-full" target="{{ link_target }}" href="{{ url }}">{{ title
+                                    }}</a>
+                                {{ /if }}
                             </li>
                             {{ /children }}
                         </ul>
-                        {{ /if  }}
+                        {{ /if }}
                     </li>
                     {{ /nav:header_navigation }}
                 </ul>
@@ -62,7 +63,8 @@
     </div>
 
     <div class="w-full lg:hidden mobile-navigation" :class="open ? 'flex': 'hidden'">
-        <ul class="flex flex-wrap flex-col justify-end w-full lg:flex-row opacity-90 font-bold pb-2">
+        <ul class="flex flex-col justify-start w-full lg:flex-row opacity-90 font-bold pb-2"
+            style="height: 500px; overflow: hidden scroll; max-height: 500px;">
 
             {{ nav:header_navigation include_home = "true" }}
             <li class="w-full ">
@@ -79,13 +81,13 @@
                                 class="{{navigation_icon}}"></i></a>
                         {{ else }}
                         <a class="block pl-4 p-2 w-full" target="{{ link_target }}" href="{{ url }}">{{ title }}</a>
-                        {{ /if     }}
+                        {{ /if }}
                     </li>
                     {{ /children }}
                 </ul>
-                {{ /if  }}
+                {{ /if }}
             </li>
-            {{ /nav:header_navigation         }}
+            {{ /nav:header_navigation }}
         </ul>
     </div>
 </nav>
