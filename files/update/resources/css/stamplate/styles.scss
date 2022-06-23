@@ -1,56 +1,68 @@
 h1 {
-    @apply text-3xl font-bold pb-4 pt-2;
+  @apply text-3xl font-bold pb-4 pt-2;
 }
+
 h2 {
-    @apply text-2xl font-bold pb-4 pt-2;
+  @apply text-2xl font-bold pb-4 pt-2;
 }
+
 h3 {
-    @apply text-xl font-bold pb-4 pt-2;
+  @apply text-xl font-bold pb-4 pt-2;
 }
+
 body {
-    @apply leading-relaxed text-gray-600 bg-gray-100;
+  @apply leading-relaxed text-gray-600 bg-gray-100;
 
+  #logo-container {
+    @apply h-12 md:h-24 text-lg md:text-2xl;
+
+    img {
+      @apply py-4;
+    }
+  }
+
+  &.scrolled {
     #logo-container {
-        @apply h-12 md:h-24 text-lg md:text-2xl;
+      @apply h-12 text-base font-bold;
+      img {
+        @apply py-2;
+      }
+    }
+  }
 
-        img {
-            @apply py-4;
-        }
+  .custom-breadcrumb {
+    color: var(--global-breadnavi-light);
+    background-color: var(--global-breadnavi-dark);
+  }
+
+  .custom-content {
+    p {
+      @apply pb-5;
     }
 
-    &.scrolled {
-        #logo-container {
-            @apply h-12 text-base font-bold;
-        }
-
-        img {
-            @apply py-2;
-        }
+    ul {
+      list-style: initial;
+      margin: initial;
+      padding: 0 0 0 40px;
     }
 
-    .custom-breadcrumb {
-        color: var(--global-breadnavi-light);
-        background-color: var(--global-breadnavi-dark);
+    li {
+      display: list-item;
     }
+  }
 
-    .custom-content {
-        p {
-            @apply pb-5;
-        }
+  .custom-header-text {
+    @include stroke();
+  }
+
+  a.custom-badge {
+    @apply rounded-full text-xs px-2 py-1 mr-2 no-underline;
+    background-color: var(--global-breadnavi-light);
+    color: var(--global-breadnavi-dark);
+
+    &:hover {
+      color: var(--global-breadnavi-light);
+      background-color: var(--global-breadnavi-dark);
     }
-
-    .custom-header-text {
-        @include stroke();
-    }
-
-    a.custom-badge {
-        @apply rounded-full text-xs px-2 py-1 mr-2 no-underline;
-        background-color: var(--global-breadnavi-light);
-        color: var(--global-breadnavi-dark);
-
-        &:hover {
-            color: var(--global-breadnavi-light);
-            background-color: var(--global-breadnavi-dark);
-        }
-    }
+  }
 }
