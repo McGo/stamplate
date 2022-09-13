@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="columns-8 gap-4">
+        <glightbox-image>
+            {{ bildergallerie_bilder }}
+            <a class="glightbox" href="{{ glide src="{{url}}" quality="75" width="1000" sharpen="10"
+            fit="crop_focal" }}" data-gallery="gallery1">
+            <img class="border shadow-md rounded-md my-2" src="{{ glide src="{{url}}" quality="75" width="150"
+            sharpen="10"
+            fit="crop_focal" }}" alt="image" />
+            </a>
+            {{ /bildergallerie_bilder    }}
+        </glightbox-image>
+    </div>
+</div>

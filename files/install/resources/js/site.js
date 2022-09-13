@@ -13,5 +13,5 @@ app.component('parallax-image', require('./components/ParallaxImage.vue').defaul
 app.component('prism-highlight', require('./components/PrismHighlight.vue').default);
 app.component('cookie-consent', require('./components/CookieConsent.vue').default);
 app.component('cookie-consent-given', require('./components/CookieConsentGiven.vue').default);
-
+app.component('glightbox-image', require('./components/GlightboxImage.vue').default);
 app.mount('#top');
