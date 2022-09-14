@@ -126,7 +126,6 @@ sections:
         handle: slug
         field:
           type: slug
-          required: true
           localizable: true
           validate:
             - required
@@ -178,6 +177,23 @@ sections:
           icon: template
           listable: hidden
           instructions_position: above
+      -
+        handle: comment_configuration
+        field:
+          options:
+            open: 'Kommentieren möglich'
+            closed: 'Geschlossen, Einsendungen sichtbar'
+            hidden: Versteckt
+          inline: false
+          cast_booleans: false
+          default: closed
+          display: Kommentarfunktion
+          type: radio
+          icon: radio
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
   SEO:
     display: SEO
     fields:
@@ -390,6 +406,6 @@ sections:
           allow_uploads: true
           max_files: 1
           type: assets
-          instructions: 'If not set, the general image will be used. It''s best to use an image with a 1.91:1 aspect ratio that is at least 1200px wide for universal support. The image will be resized to 1200 width.'
+          instructions: "If not set, the general image will be used. It's best to use an image with a 1.91:1 aspect ratio that is at least 1200px wide for universal support. The image will be resized to 1200 width."
           listable: hidden
           display: Image

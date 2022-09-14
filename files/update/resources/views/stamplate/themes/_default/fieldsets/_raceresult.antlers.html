@@ -1,0 +1,8 @@
+{{ if rr_type == "teilnehmer"}}
+<raceresult-teilnehmer :eventid="{{veranstaltungs_id}}"></raceresult-teilnehmer>
+{{ else if rr_type == "ergebnisse"}}
+<raceresult-ergebnisse :eventid="{{veranstaltungs_id}}"></raceresult-ergebnisse>
+{{ else if rr_type == "anmeldung"}}
+<raceresult-anmeldung :eventid="{{veranstaltungs_id}}" regkey="{{triathlonsteuerung:raceresult_regkey_id}}"></raceresult-anmeldung>
+{{ /if }}
+

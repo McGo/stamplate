@@ -1,0 +1,39 @@
+{{ if comment_configuration==="open" || comment_configuration==="closed"}}
+{{ meerkat:responses }}
+<hr class="px-8 pt-4">
+<h4>Deine Meinung dazu?</h4>
+<div class="pt-4">
+    {{ comments }}
+
+    <div class="border-b">
+        <h4 class="text-sm font-medium">{{ author.name }}</h4>
+        {{ last_modified }}
+        {{ content }}
+    </div>
+    {{ /comments      }}
+</div>
+
+{{ /meerkat:responses }}
+{{ /if }}
+
+{{ if comment_configuration==="open" }}
+{{ meerkat:create }}
+<div class="pt-4">
+    {{ fields }}
+
+    <div class="form-group pt-2">
+        <label>{{ display }}</label>
+        {{ field }}
+    </div>
+
+    {{ /fields     }}
+
+    <div class="pt-4">
+        <input type="submit" value="Kommentar absenden">
+        <div class="text-2xs">Die Einsendung wird nicht sofort veröffentlicht sondern Dank der vielen SPAM Schleudern da
+            draußen im Internet erst einmal von uns geprüft und dann freigegeben.
+        </div>
+    </div>
+</div>
+{{ /meerkat:create }}
+{{ /if }}
