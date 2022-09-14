@@ -19,6 +19,26 @@
 {{ if comment_configuration==="open" }}
 {{ meerkat:create }}
 <div class="pt-4">
+
+    {{ if success }}
+    <div class="w-full mx-3 mb-4 px-3 py-3 rounded relative" role="alert">
+        <strong class="font-bold">Danke !</strong>
+        <span class="block sm:inline">Dein Beitrag ist angekommen - wir schauen jetzt noch schnell drüber und geben ihn dann frei.</span>
+    </div>
+    {{ else }}
+    {{ if errors }}
+    <div class="w-full mx-3 border-red-600 text-red-700 mb-4 px-3 py-3 rounded relative" role="alert">
+        <strong class="font-bold">Oh nein!</strong>
+        <span class="block sm:inline">Irgendwie gab es grad einen Fehler...</span>
+        <ul>
+            {{ errors }}
+            <li>{{ value }}</li>
+            {{ /errors }}
+        </ul>
+    </div>
+    {{ /if }}
+    {{ /if }}
+
     {{ fields }}
 
     <div class="form-group pt-2">
