@@ -6,7 +6,7 @@
     {{ asset :url = "header_image_content_image" }}
     <div class="w-full h-full relative overflow-hidden">
         <div class="w-full h-full absolute top-0 left-0 bg-cover custom-headerimage"
-             style="background-image: url('{{ glide src="{{ url }}" quality="100" width="1500" sharpen="10" fit="crop_focal" }}'); background-position: {{ focus_css }};">
+             style="background-image: url('{{ glide src="{{ url }}" quality="100" contrast="-10" blur="10" brightness="-20" width="1500" sharpen="10" fit="crop_focal" }}'); background-position: {{ focus_css }};">
     </div>
     <div class="text-white absolute bottom-0 left-0 w-full custom-header-text">
         <div class="pb-4 container">

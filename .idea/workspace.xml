@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b17c5348-994d-4978-9b41-3b73dce66bab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stamplate.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/update/resources/views/stamplate/themes/_default/partials/_comments.antlers.html" beforeDir="false" afterPath="$PROJECT_DIR$/files/update/resources/views/stamplate/themes/_default/partials/_comments.antlers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/update/resources/blueprints/collections/pages/pages.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/files/update/resources/blueprints/collections/pages/pages.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/update/resources/views/blog/kategorie/show.antlers.html" beforeDir="false" afterPath="$PROJECT_DIR$/files/update/resources/views/blog/kategorie/show.antlers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/update/resources/views/blog/tags/show.antlers.html" beforeDir="false" afterPath="$PROJECT_DIR$/files/update/resources/views/blog/tags/show.antlers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/update/resources/views/stamplate/themes/headerimage/partials/_headerimages.antlers.html" beforeDir="false" afterPath="$PROJECT_DIR$/files/update/resources/views/stamplate/themes/headerimage/partials/_headerimages.antlers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -58,7 +57,8 @@
       <workItem from="1653895209300" duration="59000" />
       <workItem from="1662363191389" duration="1591000" />
       <workItem from="1663072942257" duration="143000" />
-      <workItem from="1663149956162" duration="3021000" />
+      <workItem from="1663149956162" duration="4165000" />
+      <workItem from="1663231867819" duration="2202000" />
     </task>
     <servers />
   </component>

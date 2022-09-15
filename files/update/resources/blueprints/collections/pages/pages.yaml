@@ -73,11 +73,11 @@ sections:
               fields:
                 -
                   import: fieldset_image_with_text
-            image_gallery:
+            bildergallerie:
               display: Bildergallerie
               fields:
                 -
-                  import: fieldset_gallery
+                  import: bildergallerie
             fileattachment:
               display: Dateianhang
               fields:
@@ -114,6 +114,10 @@ sections:
                 -
                   import: fieldset_events
           antlers: false
+          visibility: visible
+          always_save: false
+          previews: true
+          remove_empty_nodes: false
   header:
     display: Header
     fields:
